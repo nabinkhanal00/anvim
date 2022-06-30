@@ -1,0 +1,13 @@
+source $HOME/.config/nvim/plug-config/alpha.vim
+source $HOME/.config/nvim/plug-config/autopairs.vim
+source $HOME/.config/nvim/plug-config/comment.vim
+source $HOME/.config/nvim/plug-config/completion.vim
+source $HOME/.config/nvim/plug-config/gitsigns.vim
+source $HOME/.config/nvim/plug-config/lualine.vim
+source $HOME/.config/nvim/plug-config/nvimtree.vim
+source $HOME/.config/nvim/plug-config/outline.vim
+source $HOME/.config/nvim/plug-config/project.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
+source $HOME/.config/nvim/plug-config/toggleterm.vim
+source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/whichkey.vim

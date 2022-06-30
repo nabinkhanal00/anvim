@@ -1,0 +1,48 @@
+{
+	"include iostream": {
+		"prefix": "ii",
+		"body": [
+			"#include <iostream>\n"
+		]
+	},
+	"cout": {
+		"prefix": "co",
+		"body": [
+			"std::cout << $1 << std::endl;"
+		]
+	},
+	"cin": {
+		"prefix": "ci",
+		"body": [
+			"std::cin >> $1;"
+		]
+	},
+	"namespace":{
+		"prefix":"ns",
+		"body" : [
+			"using namespace std;\n"
+		]
+	},
+	"hint":{
+		"prefix":"hint",
+		"body":[
+			"glfwWindowHint(GLFW_SAMPLES, 4);\nglfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);\nglfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);\nglfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);\n"
+		]
+	},
+	"cp":{
+		"prefix":"cp",
+		"body":[
+			"#include <bits/stdc++.h>",
+			"using namespace std;\n",
+			"using ll = long long;",
+			"",
+			"template<typename T>",
+			"using vec = vector<T>;",
+			"",
+			"int main(){",
+				"\tios::sync_with_stdio(0);\n\tcin.tie(0);",
+				"\n\t$0",
+			"}"
+		]
+	}
+}
