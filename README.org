@@ -1,5 +1,5 @@
 #+TITLE: A NVIM
-
+*anvim* is a simple nvim configuration for regular users of vim.
 * Build Instructions
 #+BEGIN_SRC bash
 
