@@ -17,3 +17,5 @@ git clone https://github.com/khanalnabin/anvim.git ~/.config/nvim
 nvim +PlugInstall
 
 #+END_SRC
+
+*** Note: Switch to the rolling branch for regular updates.
