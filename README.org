@@ -49,12 +49,19 @@ snippets contains snippets for different filetypes.
 The files  inside ftplugin are called according to the type of file in the current buffer.
 
 ** Screenshots 
+*** Alpha
 [[./screenshots/alpha.png]]
+*** Find Files
 [[./screenshots/find-files.png]]
+*** Live Grep 
 [[./screenshots/live-grep.png]]
+*** Neovim LSP
 [[./screenshots/lsp.png]]
+*** Project Outline
 [[./screenshots/outline.png]]
+*** Neovim Projects
 [[./screenshots/projects.png]]
+*** Toggle Terminal
 [[./screenshots/toggleterm.png]]
 
 *** Note: Switch to the rolling branch for regular updates.
