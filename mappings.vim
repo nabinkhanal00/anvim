@@ -46,3 +46,4 @@ imap <C-BS> <C-w>
 nnoremap <M-y> "+y
 vnoremap <M-y> "+y
 nnoremap <M-p> "+p
+vnoremap <M-p> "+p
