@@ -18,4 +18,43 @@ nvim +PlugInstall
 
 #+END_SRC
 
+** File and Directory Descriptions
+
+*** init.vim
+init.vim is the starting point of nvim. All the remaining configuration files 
+are sourced from init.vim.
+
+*** settings.vim
+settings.vim sets some vim specific variables.
+
+*** config.vim
+config.vim contains configuration for those plugins which donot need specific setup. 
+
+*** plugins.vim
+plugins.vim contains command to install different plugins.
+
+*** mappings.vim
+mappings.vim includes general keymappings. 
+
+*** vscode.vim
+vscode.vim is a file to be sourced from vscode if someone wants to use neovim in vscode.
+
+*** plug-config
+plug-config contains configuration files related to different plugins.
+
+*** snippets
+snippets contains snippets for different filetypes.
+
+*** ftplugin
+The files  inside ftplugin are called according to the type of file in the current buffer.
+
+** Screenshots 
+[[./screenshots/alpha.png]]
+[[./screenshots/find-files.png]]
+[[./screenshots/live-grep.png]]
+[[./screenshots/lsp.png]]
+[[./screenshots/outline.png]]
+[[./screenshots/projects.png]]
+[[./screenshots/toggleterm.png]]
+
 *** Note: Switch to the rolling branch for regular updates.
