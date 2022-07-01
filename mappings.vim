@@ -1,9 +1,10 @@
-inoremap <silent> <C-l> <Esc><C-w>li
-inoremap <silent> <C-h> <Esc><C-w>hi
-
-
+" copy the current line to next line
 nnoremap J m`YP``
+
+" copy current selection to next line
 vnoremap J m`YP``v``
+
+" yank till the end of the line from start of the cursor
 nnoremap Y y$
 
 inoremap , ,<c-g>u
