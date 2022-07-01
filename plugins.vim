@@ -36,7 +36,7 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-surround'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'kevinhwang91/rnvimr'
-
 Plug 'simrat39/symbols-outline.nvim'
+Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
