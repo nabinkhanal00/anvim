@@ -13,6 +13,11 @@ mv ~/.config/nvim ~/.config/nvim.bak
 # clone the repo
 git clone https://github.com/khanalnabin/anvim.git ~/.config/nvim
 
+# make a config file for the user
+# here you can keep your own configs
+
+touch ~/.config/nvim
+
 # start nvim
 nvim +PlugInstall
 
