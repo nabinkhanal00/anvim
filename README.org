@@ -4,8 +4,8 @@
 #+BEGIN_SRC bash
 
 # install vim plug 
-curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # keep the backup (optional)
 mv ~/.config/nvim ~/.config/nvim.bak
@@ -15,7 +15,6 @@ git clone https://github.com/khanalnabin/anvim.git ~/.config/nvim
 
 # make a config file for the user
 # here you can keep your own configs
-
 touch ~/.config/nvim
 
 # start nvim
