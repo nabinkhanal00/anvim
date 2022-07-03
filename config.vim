@@ -1,9 +1,9 @@
 let g:VM_maps={}
-let g:VM_maps['Find Under']                  = '<C-n>'
-let g:VM_maps['Find Subword Under']          = '<C-n>'
+let g:VM_maps['Find Under']                  = '<M-n>'
+let g:VM_maps['Find Subword Under']          = '<M-n>'
 let g:VM_maps['Select All']                  = '\\A' 
-let g:VM_maps['Add Cursor Down']             = '<C-Down>'
-let g:VM_maps['Add Cursor Up']               = '<C-Up>'
+let g:VM_maps['Add Cursor Down']             = '<M-Down>'
+let g:VM_maps['Add Cursor Up']               = '<M-Up>'
 
 set guifont=Space\ Mono\ for\ Powerline:h10
 
