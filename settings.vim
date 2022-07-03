@@ -1,40 +1,36 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-syntax enable                           " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
-set encoding=utf-8                      " The encoding displayed
-set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
-set ruler                                   " Show the cursor position all the time
-set cmdheight=1                         " More space for displaying messages
-set iskeyword+=-                        " treat dash separated words as a word text object"
-set mouse=a                             " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
+syntax enable                           
+set hidden                              
+set nowrap                              
+set encoding=utf-8                      
+set pumheight=10                        
+set fileencoding=utf-8                  
+set ruler                               
+set cmdheight=1                         
+set iskeyword+=-                        
+set mouse=a                             
+set splitbelow                          
+set splitright                          
+set t_Co=256                            
 set tabstop=4
-set conceallevel=0                      " So that I can see `` in markdown files
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
-set laststatus=2                        " Always display the status line
+set conceallevel=0                      
+set smartindent                         
+set autoindent                          
+set laststatus=2                        
 set shiftwidth=4
-set number                              " Line numbers
-" set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
-set showtabline=2                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set autochdir                           " Your working directory will always be the same as your working directory
-set signcolumn=yes                      " Leave space for sign before linenumbers
+set number                              
+set background=dark                     
+set showtabline=2                       
+set noshowmode                          
+set updatetime=300                      
+set timeoutlen=500                      
+set autochdir                           
+set signcolumn=yes                      
 set title
 set numberwidth=3
 set completeopt=menu,noselect,noinsert
-" set clipboard=unnamedplus
 set so=999
 autocmd FileType * setlocal formatoptions-=cro
 syntax on
-
-
