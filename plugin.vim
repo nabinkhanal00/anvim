@@ -48,8 +48,8 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
 
-if filereadable(expand('~/.config/nvim/user/plugins.vim'))
-	source ~/.config/nvim/user/plugins.vim
+if filereadable(expand('~/.config/nvim/user/plugin.vim'))
+	source ~/.config/nvim/user/plugin.vim
 endif
 
 call plug#end()
