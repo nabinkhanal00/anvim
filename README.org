@@ -38,9 +38,6 @@ vscode.vim is a file to be sourced from vscode if someone wants to use neovim in
 *** plugins
 plugins contains configuration files related to different plugins.
 
-*** snippets
-snippets contains snippets for different filetypes.
-
 *** ftplugin
 The files  inside ftplugin are called according to the type of file in the current buffer.
 
