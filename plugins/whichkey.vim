@@ -83,7 +83,7 @@ local mappings = {
 
   ["<space>"] = {"<cmd>Telescope find_files theme=get_dropdown hidden=true previewer=false<cr>", "Find files"},
 
-  ["/"] = {"<cmd>Telescope live_grep theme=ivy<cr>", "Find Text"},
+  ["/"] = {"<cmd>Telescope live_grep <cr>", "Find Text"},
 
   ["."] = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
 
