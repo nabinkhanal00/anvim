@@ -30,7 +30,7 @@ settings.vim sets some vim specific variables.
 *** config.vim
 config.vim contains configuration for those plugins which donot need specific setup. 
 
-*** plugins.vim
+*** plugin.vim
 plugins.vim contains command to install different plugins.
 
 *** mappings.vim
