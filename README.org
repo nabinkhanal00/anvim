@@ -13,10 +13,6 @@ mv ~/.config/nvim ~/.config/nvim.bak
 # clone the repo
 git clone https://github.com/khanalnabin/anvim.git ~/.config/nvim
 
-# make a config file for the user
-# here you can keep your own configs
-touch ~/.config/nvim/user-config.vim
-
 # start nvim
 nvim +PlugInstall
 
@@ -43,14 +39,20 @@ mappings.vim includes general keymappings.
 *** vscode.vim
 vscode.vim is a file to be sourced from vscode if someone wants to use neovim in vscode.
 
-*** plug-config
-plug-config contains configuration files related to different plugins.
+*** plugins
+plugins contains configuration files related to different plugins.
 
 *** snippets
 snippets contains snippets for different filetypes.
 
 *** ftplugin
 The files  inside ftplugin are called according to the type of file in the current buffer.
+
+*** user
+The user directory contains the user configurations. You can keep your own configs inside user directory.
+The init.vim inside the user directory is already sourced. You can create an init.vim file inside user directory
+and source all other files from there. Your plugins can be kept inside the *plugin.vim* file inside user directory. file
+You don't need to source plugin.vim file. It is already sourced.
 
 ** Screenshots 
 *** Alpha
