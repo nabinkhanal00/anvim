@@ -36,7 +36,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
-Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-tree.lua'
