@@ -1,1 +1,1 @@
-nnoremap <buffer> <leader>r <cmd>w<CR><cmd>TermExec cmd="node %"<CR>
+nnoremap <buffer> <leaderc>r <cmd>w<CR><cmd>TermExec cmd="node %"<CR>

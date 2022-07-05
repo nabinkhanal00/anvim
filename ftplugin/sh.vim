@@ -1,1 +1,1 @@
-nnoremap <buffer> <leader>r <cmd>w<CR><cmd>TermExec cmd="bash %"<CR>
+nnoremap <buffer> <leader>cr <cmd>w<CR><cmd>TermExec cmd="bash %"<CR>

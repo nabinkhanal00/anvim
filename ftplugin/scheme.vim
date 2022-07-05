@@ -1,1 +1,1 @@
-nnoremap <buffer> <leader>r <cmd>TermExec cmd="racket %"<cr>
+nnoremap <buffer> <leader>cr <cmd>TermExec cmd="racket %"<cr>
