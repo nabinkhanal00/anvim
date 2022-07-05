@@ -76,14 +76,11 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	[","] = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>","Buffers"},
 	["<space>"] = {"<cmd>Telescope find_files theme=get_dropdown hidden=true previewer=false<cr>", "Find files"},
 	["/"] = {"<cmd>Telescope live_grep <cr>", "Find Text"},
 	["."] = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
-	["x"] = { "<cmd>bd!<CR>", "Buffer Delete" },
-	["w"] = { "<cmd>w!<CR>", "Save File" },
-	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+	["s"] = { "<cmd>w!<CR>", "Save File" },
+	[";"] = { "<cmd>source $MYVIMRC<CR>", "Reload nvim" },
 
 	g = {
 		name = "Git",
@@ -126,9 +123,42 @@ local mappings = {
 			b = {"<cmd>TermExec cmd=\"make build\"<cr>", "Build"},
 			r = {"<cmd>TermExec cmd=\"make run\"<cr>", "Run"},
 			c = {"<cmd>TermExec cmd=\"make clean\"<cr>", "Clean"},
-			}
-		}
+			},
+		h = { "<cmd>nohlsearch<CR>", "No Highlight" },
+		},
 
+	b = {
+		name = "Buffers",
+		d = { "<cmd>bd!<cr>", "Delete" },
+		l = {"<cmd>BufferNext<cr>", "Right"},
+		h = {"<cmd>BufferPrevious<cr>", "Left"},
+		b = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>","List"},
+		},
+
+	w = {
+		name = "Window",
+		l = {"<C-w>l", "Right"},
+		h = {"<C-w>h", "Left"},
+		j = {"<C-w>j", "Down"},
+		k = {"<C-w>k", "Up"},
+		v = {"<C-w>v", "Split Right"},
+		s = {"<C-w>s", "Split Down"},
+		L = {"<C-w>5>", "Expand Right"},
+		["."] = {"<C-w>5>", "Expand Right"},
+		H = {"<C-w>5<", "Expand Left"},
+		[","] = {"<C-w>5<", "Expand Left"},
+		J = {"<cmd>resize +5<cr>", "Expand Down"},
+		K = {"<cmd>resize -5<cr>", "Expand Up"},
+		q = {"<C-w>q", "Quit Window"},
+		w = {"<C-w>s", "Switch Window"},
+		x = {"<C-w>x", "Swap Window"},
+		["="] = {"<C-w>=", "Balance Window"}
+		},
+
+	p = {
+		name = "Projects",
+		p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "list" },
+		}
 	}
 wk.register(mappings, opts)
 EOF
