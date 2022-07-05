@@ -76,7 +76,7 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["<space>"] = {"<cmd>Telescope find_files theme=get_dropdown hidden=true previewer=false<cr>", "Find files"},
+	["<space>"] = {"<cmd>Telescope find_files <cr>", "Find files"},
 	["/"] = {"<cmd>Telescope live_grep <cr>", "Find Text"},
 	["."] = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
 	["s"] = { "<cmd>w!<CR>", "Save File" },
@@ -132,7 +132,7 @@ local mappings = {
 		d = { "<cmd>bd!<cr>", "Delete" },
 		l = {"<cmd>BufferNext<cr>", "Right"},
 		h = {"<cmd>BufferPrevious<cr>", "Left"},
-		b = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>","List"},
+		b = {"<cmd>lua require('telescope.builtin').buffers()<cr>","List"},
 		},
 
 	w = {
@@ -158,6 +158,20 @@ local mappings = {
 	p = {
 		name = "Projects",
 		p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "list" },
+		},
+	f = {
+		name = "Find",
+		f = {"<cmd>lua require('telescope.builtin').find_files()<cr>","Files"},
+		F = {"<cmd>lua require('telescope.builtin').find_files{ hidden=true, no_ignore=true }<cr>","All Files"},
+		b = {"<cmd>lua require('telescope.builtin').buffers()<cr>","Buffers"},
+		h = {"<cmd>lua require('telescope.builtin').help_tags()<cr>","Help Tags"},
+		r = {"<cmd>lua require('telescope.builtin').registers()<cr>","Registers"},
+		m = {"<cmd>lua require('telescope.builtin').marks()","Marks"},
+		o = {"<cmd>lua require('telescope.builtin').oldfiles()<cr>","Old Files"},
+		c = {"<cmd>lua require('telescope.builtin').grep_string()<cr>","Search word under cursor"},
+		t = {"<cmd>lua require('telescope.builtin').live_grep()<cr>","Search Text"},
+		C = {"<cmd>lua require('telescope.builtin').colorscheme()<cr>","Colorschemes"},
+		p = {"<cmd>lua require('telescope.builtin').colorscheme{enable_preview=true}<cr>","Preview Colorscheme"},
 		}
 	}
 wk.register(mappings, opts)
