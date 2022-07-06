@@ -29,8 +29,6 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'goolord/alpha-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'p00f/nvim-ts-rainbow'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
