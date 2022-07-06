@@ -1,5 +1,9 @@
 #+TITLE: A NVIM
 *anvim* is a simple nvim configuration for regular users of vim.
+
+* Requirements
+neovim >= 0.7
+
 * Build Instructions
 #+BEGIN_SRC bash
 
