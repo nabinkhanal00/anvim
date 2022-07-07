@@ -26,7 +26,6 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'goolord/alpha-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'akinsho/toggleterm.nvim'
@@ -44,7 +43,8 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
-
+Plug 'p00f/cphelper.nvim'
+Plug 'stevearc/dressing.nvim'
 if filereadable(expand('~/.config/nvim/user/plugin.vim'))
 	source ~/.config/nvim/user/plugin.vim
 endif

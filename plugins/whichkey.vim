@@ -119,12 +119,20 @@ local mappings = {
 	c = {
 		name = "Code",
 		m = {
-			name = "make",
+			name = "Make",
 			b = {"<cmd>TermExec cmd=\"make build\"<cr>", "Build"},
 			r = {"<cmd>TermExec cmd=\"make run\"<cr>", "Run"},
 			c = {"<cmd>TermExec cmd=\"make clean\"<cr>", "Clean"},
 			},
 		h = { "<cmd>nohlsearch<CR>", "No Highlight" },
+		p = {
+			name = "Competitive Programming",
+			r = {"<cmd>CphReceive<cr>", "Receive"},
+			t = {"<cmd>CphTest<cr>", "Test"},
+			e = {"<cmd>CphEdit<cr>", "Edit"},
+			d = {"<cmd>CphDelete<cr>", "Delete"},
+			},
+		r = {"<cmd><cr>", "Run"}
 		},
 
 	b = {
