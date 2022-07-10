@@ -45,6 +45,7 @@ Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'p00f/cphelper.nvim'
 Plug 'stevearc/dressing.nvim'
+Plug 'nvim-orgmode/orgmode'
 if filereadable(expand('~/.config/nvim/user/plugin.vim'))
 	source ~/.config/nvim/user/plugin.vim
 endif

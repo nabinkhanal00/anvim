@@ -87,8 +87,8 @@ local kind_icons = {
       },
     sources = cmp.config.sources({
 	  	{ name = 'nvim_lsp' },
-		{name='nvim_lsp_signature_help', extended_docs=true},
-      	{ name = 'vsnip' }, 
+		{ name = 'orgmode'},
+      	{ name = 'vsnip' },
     }, {
       { name = 'buffer' },
     })
