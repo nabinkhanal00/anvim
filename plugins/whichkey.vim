@@ -119,12 +119,6 @@ local mappings = {
 
 	c = {
 		name = "Code",
-		m = {
-			name = "Make",
-			b = {"<cmd>TermExec cmd=\"make build\"<cr>", "Build"},
-			r = {"<cmd>TermExec cmd=\"make run\"<cr>", "Run"},
-			c = {"<cmd>TermExec cmd=\"make clean\"<cr>", "Clean"},
-			},
 		h = { "<cmd>nohlsearch<CR>", "No Highlight" },
 		p = {
 			name = "Competitive Programming",
@@ -135,10 +129,6 @@ local mappings = {
 			},
 		r = {"<cmd><cr>", "Run"},
 		["/"] = {"gcc", "Comment"},
-
-		c = {
-			name="Pretty Comment",
-			}
 		},
 
 	b = {
