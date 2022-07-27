@@ -13,7 +13,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons' 
 Plug 'kdheepak/lazygit.nvim',
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'chaoren/vim-wordmotion'
+" Plug 'chaoren/vim-wordmotion'
 Plug 'numToStr/Comment.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'mg979/vim-visual-multi'

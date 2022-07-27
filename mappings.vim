@@ -13,7 +13,7 @@ inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
-nnoremap <C-a>  G$vgg^
+" nnoremap <C-a>  G$vgg^
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l

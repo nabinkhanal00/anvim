@@ -133,7 +133,12 @@ local mappings = {
 			e = {"<cmd>CphEdit<cr>", "Edit"},
 			d = {"<cmd>CphDelete<cr>", "Delete"},
 			},
-		r = {"<cmd><cr>", "Run"}
+		r = {"<cmd><cr>", "Run"},
+		["/"] = {"gcc", "Comment"},
+
+		c = {
+			name="Pretty Comment",
+			}
 		},
 
 	b = {
