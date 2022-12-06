@@ -1,4 +1,4 @@
-nnoremap <buffer> <leader>cr <cmd>w<CR><cmd>exec Runcpp("%") <CR>
+nnoremap <buffer> <leader>r <cmd>w<CR><cmd>exec Runcpp("%") <CR>
 autocmd BufWritePre <buffer> :lua vim.lsp.buf.format{}
 
 function! Runcpp(filename)

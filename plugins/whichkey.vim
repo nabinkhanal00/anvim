@@ -127,10 +127,9 @@ local mappings = {
 			e = {"<cmd>CphEdit<cr>", "Edit"},
 			d = {"<cmd>CphDelete<cr>", "Delete"},
 			},
-		r = {"<cmd><cr>", "Run"},
 		["/"] = {"gcc", "Comment"},
 		},
-
+	r = {"<cmd><cr>", "Run"},
 	b = {
 		name = "Buffers",
 		d = { "<cmd>BufferClose<cr>", "Delete" },
