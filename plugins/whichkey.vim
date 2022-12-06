@@ -149,6 +149,7 @@ local mappings = {
 		h = {"<C-w>h", "Left"},
 		j = {"<C-w>j", "Down"},
 		k = {"<C-w>k", "Up"},
+		["|"] = {"<C-w>|", "Full Window"},
 		v = {"<C-w>v", "Split Right"},
 		s = {"<C-w>s", "Split Down"},
 		L = {"<C-w>5>", "Expand Right"},
