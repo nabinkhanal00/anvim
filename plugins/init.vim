@@ -1,14 +1,13 @@
-source $HOME/.config/nvim/plugins/alpha.vim
-source $HOME/.config/nvim/plugins/autopairs.vim
-source $HOME/.config/nvim/plugins/comment.vim
-source $HOME/.config/nvim/plugins/completion.vim
-source $HOME/.config/nvim/plugins/gitsigns.vim
-source $HOME/.config/nvim/plugins/lualine.vim
-source $HOME/.config/nvim/plugins/nvimtree.vim
-source $HOME/.config/nvim/plugins/outline.vim
-source $HOME/.config/nvim/plugins/project.vim
-" source $HOME/.config/nvim/plugins/tabout.vim
-source $HOME/.config/nvim/plugins/telescope.vim
-source $HOME/.config/nvim/plugins/toggleterm.vim
-source $HOME/.config/nvim/plugins/treesitter.vim
-source $HOME/.config/nvim/plugins/whichkey.vim
+exec "source " . JoinPath(g:config_path, 'plugins', 'alpha.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'autopairs.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'comment.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'completion.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'gitsigns.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'lualine.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'nvimtree.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'outline.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'project.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'telescope.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'toggleterm.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'treesitter.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'whichkey.vim')
