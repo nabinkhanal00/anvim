@@ -4,17 +4,43 @@
 * Requirements
 neovim >= 0.7
 
-* Build Instructions
+* Build Instructions 
+
+** Prerequisite
+
+*** Install [[https://github.com/junegunn/vim-plug][vim-plug]] for your os
+
+** For Linux
 #+BEGIN_SRC bash
 
 # keep the backup (optional)
-mv ~/.config/nvim ~/.config/nvim.bak
+mv $HOME/.config/nvim $HOME/.config/nvim.bak
 
 # clone the repo
-git clone https://github.com/khanalnabin/anvim.git ~/.config/nvim
+git clone https://github.com/khanalnabin/anvim.git $HOME/.config/nvim
 
 # start nvim
 nvim
+
+# install the plugins
+:PlugInstall<CR>
+
+#+END_SRC
+
+* Build Instructions for Windows
+#+BEGIN_SRC bash
+
+# keep the backup (optional)
+mv $HOME/Appdata/Local/nvim $HOME/Appdata/Local/nvim.bak
+
+# clone the repo
+git clone https://github.com/khanalnabin/anvim.git $HOME/Appdata/Local/nvim
+
+# start nvim
+nvim
+
+# install the plugins
+:PlugInstall<CR>
 
 #+END_SRC
 

@@ -31,7 +31,16 @@ set signcolumn=yes
 set title
 set numberwidth=3
 set completeopt=menu,noselect,noinsert
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set so=999
 autocmd FileType * setlocal formatoptions-=cro
 syntax on
+
+
+if has("win64")
+	let &shell = executable('pwsh') ? 'pwsh -NoLogo' : 'powershell'
+	let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+	let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+	let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+	set shellquote= shellxquote=
+endif
