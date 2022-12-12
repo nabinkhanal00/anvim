@@ -163,10 +163,7 @@ local mappings = {
 		["="] = {"<C-w>=", "Balance Window"}
 		},
 
-	p = {
-		name = "Projects",
-		p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "list" },
-		},
+	p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	f = {
 		name = "Find",
 		f = {"<cmd>lua require('telescope.builtin').find_files()<cr>","Files"},

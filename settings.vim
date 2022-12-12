@@ -31,6 +31,7 @@ set signcolumn=yes
 set title
 set numberwidth=3
 set completeopt=menu,noselect,noinsert
+set clipboard=unnamedplus
 set so=999
 autocmd FileType * setlocal formatoptions-=cro
 syntax on
