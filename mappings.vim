@@ -48,7 +48,12 @@ vnoremap <M-y> "+y
 nnoremap <M-p> "+p
 vnoremap <M-p> "+p
 
+" some mappings for neovim terminal to work in neovide
 if exists('g:neovide')
+	tnoremap <C-S-c> <C-\><C-n>"+yi
+	tnoremap <C-S-v> <C-\><C-n>"+pi
 	tnoremap <M-y> <C-\><C-n>"+y
 	tnoremap <M-p> <C-\><C-n>"+p
+	tnoremap <C-H> <C-w>
+	tnoremap <C-BS> <C-w>
 endif
