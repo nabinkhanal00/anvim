@@ -1,5 +1,3 @@
-autocmd BufWritePre <buffer> :lua vim.lsp.buf.format{}
-
 if has("win64")
 	nnoremap <buffer> <leader>r <cmd>w<cr><cmd>TermExec cmd="g++ -o main % && ./main && rm main"<cr>
 else
