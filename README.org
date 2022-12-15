@@ -8,7 +8,7 @@ neovim >= 0.7
 
 ** Prerequisite
 
-*** Install [[https://github.com/junegunn/vim-plug][vim-plug]] for your os
+*** Install [[https://github.com/junegunn/vim-plug][vim-plug]] for your os.
 
 ** For Linux
 #+BEGIN_SRC bash
