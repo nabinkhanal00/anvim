@@ -76,8 +76,8 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["<space>"] = {"<cmd>Telescope find_files <cr>", "Find Files"},
-	["/"] = {"<cmd>Telescope live_grep <cr>", "Find Text"},
+	["<space>"] = {"<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Find Files"},
+	["/"] = {"<cmd>Telescope live_grep hidden=true no_ignore=true<cr>", "Find Text"},
 	["."] = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
 	["s"] = { "<cmd>w!<CR>", "Save File" },
 	["q"] = { "<cmd>q!<CR>", "Quit Neovim" },
