@@ -76,8 +76,8 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["<space>"] = {"<cmd>Telescope find_files <cr>", "Find Files"},
-	["/"] = {"<cmd>Telescope live_grep <cr>", "Find Text"},
+	["<space>"] = {"<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Find Files"},
+	["/"] = {"<cmd>Telescope live_grep hidden=true no_ignore=true<cr>", "Find Text"},
 	["."] = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
 	["s"] = { "<cmd>w!<CR>", "Save File" },
 	["q"] = { "<cmd>q!<CR>", "Quit Neovim" },
@@ -163,10 +163,7 @@ local mappings = {
 		["="] = {"<C-w>=", "Balance Window"}
 		},
 
-	p = {
-		name = "Projects",
-		p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "list" },
-		},
+	p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	f = {
 		name = "Find",
 		f = {"<cmd>lua require('telescope.builtin').find_files()<cr>","Files"},

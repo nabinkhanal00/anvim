@@ -1,7 +1,7 @@
 let g:VM_maps={}
 
-let g:VM_maps['Find Subword Under']          = '<M-d>'
-let g:VM_maps['Find Under']          		 = '<M-d>'
+let g:VM_maps['Find Subword Under']          = '<C-d>'
+let g:VM_maps['Find Under']          		 = '<C-d>'
 let g:VM_maps['Select All']                  = '\\A' 
 let g:VM_maps['Add Cursor Down']             = '<M-Down>'
 let g:VM_maps['Add Cursor Up']               = '<M-Up>'

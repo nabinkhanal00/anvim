@@ -1,13 +1,4 @@
-let s:plug_path= expand('~/.local/share/nvim/site/autoload/plug.vim')
-
-let s:install_plugins = 0
-
-if !filereadable(s:plug_path)
-	let s:install_plugins = 1
-	silent! exec  'silent !curl -fLo "' . s:plug_path .  '" --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-endif
-
-call plug#begin('~/.local/share/nvim/site/plugged')
+call plug#begin(JoinPath(g:data_path, 'site', 'plugged'))
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons' 
@@ -43,16 +34,9 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'p00f/cphelper.nvim'
 Plug 'stevearc/dressing.nvim'
-Plug 'nvim-orgmode/orgmode'
-if filereadable(expand('~/.config/nvim/user/plugin.vim'))
-	source ~/.config/nvim/user/plugin.vim
+if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
+	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif
 
 call plug#end()
-
-if s:install_plugins
-	silent! exec  'silent  PlugInstall'
-	silent! exec  'silent bd'
-endif

@@ -11,10 +11,10 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
+	dashboard.button("f", "  Find file", ":Telescope find_files hidden=true no_ignore=true<CR>"),
 	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
+	dashboard.button("t", "  Find text", ":Telescope live_grep hidden=true no_ignore=true<CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.vim<CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
