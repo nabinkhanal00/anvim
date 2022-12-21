@@ -35,6 +35,7 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'stevearc/dressing.nvim'
+Plug "SmiteshP/nvim-navic"
 if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
 	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif

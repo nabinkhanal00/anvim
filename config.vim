@@ -12,7 +12,4 @@ sign define DiagnosticSignError text= texthl=DiagnosticSignError
 sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn
 sign define DiagnosticSignHint text= texthl=DiagnosticSignHint
 
-autocmd FileType c,cpp setlocal commentstring=//\ %s 
-
-autocmd BufNewFile,BufRead *.vert set ft=glsl
-autocmd BufNewFile,BufRead *.frag set ft=glsl
+" autocmd FileType c,cpp setlocal commentstring=//\ %s 
