@@ -9,7 +9,12 @@ Plug 'numToStr/Comment.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'mg979/vim-visual-multi'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jayp0521/mason-null-ls.nvim'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -35,7 +40,7 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'stevearc/dressing.nvim'
-Plug "SmiteshP/nvim-navic"
+Plug 'SmiteshP/nvim-navic'
 if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
 	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif
