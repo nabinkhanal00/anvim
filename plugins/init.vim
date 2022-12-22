@@ -1,5 +1,6 @@
 exec "source " . JoinPath(g:config_path, 'plugins', 'alpha.vim')
 exec "source " . JoinPath(g:config_path, 'plugins', 'autopairs.vim')
+exec "source " . JoinPath(g:config_path, 'plugins', 'bufferline.vim')
 exec "source " . JoinPath(g:config_path, 'plugins', 'comment.vim')
 exec "source " . JoinPath(g:config_path, 'plugins', 'completion.vim')
 exec "source " . JoinPath(g:config_path, 'plugins', 'gitsigns.vim')

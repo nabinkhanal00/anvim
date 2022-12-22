@@ -1,6 +1,6 @@
 call plug#begin(JoinPath(g:data_path, 'site', 'plugged'))
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'kyazdani42/nvim-web-devicons' 
 Plug 'kdheepak/lazygit.nvim',
 Plug 'kyazdani42/nvim-tree.lua'
@@ -36,11 +36,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-surround'
 Plug 'ahmedkhalf/project.nvim'
-Plug 'kevinhwang91/rnvimr'
-Plug 'simrat39/symbols-outline.nvim'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'stevearc/dressing.nvim'
-Plug 'SmiteshP/nvim-navic'
+Plug 'SmiteshP/nvim-gps'
 if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
 	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif

@@ -25,8 +25,8 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
-nnoremap <silent> H  <cmd>BufferPrevious<CR>
-nnoremap <silent> L <cmd>BufferNext<CR>
+nnoremap <silent> H  <cmd>bprevious<CR>
+nnoremap <silent> L <cmd>bnext<CR>
 
 nnoremap gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap gD <cmd>lua vim.lsp.buf.declaration()<CR>

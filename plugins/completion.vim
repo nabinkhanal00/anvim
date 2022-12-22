@@ -120,9 +120,11 @@ require("mason-lspconfig").setup_handlers {
 require("mason-null-ls").setup({
     automatic_setup = true,
 })
-require 'mason-null-ls'.setup_handlers() 
+require('mason-null-ls').setup_handlers() 
 
 require("noice").setup()
+
+-- lvim.lsp.on_attach_callback = function
 EOF
 let g:vsnip_snippet_dir="/home/nabin/.config/nvim/snippets"
 imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
