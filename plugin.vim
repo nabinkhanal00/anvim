@@ -13,6 +13,8 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'jayp0521/mason-null-ls.nvim'
+Plug 'mfussenegger/nvim-dap'
+Plug 'jayp0521/mason-nvim-dap.nvim'
 Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'hrsh7th/nvim-cmp'
@@ -37,6 +39,7 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-surround'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'SmiteshP/nvim-gps'
+Plug 'simrat39/symbols-outline.nvim'
 if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
 	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif

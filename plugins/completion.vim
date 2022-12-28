@@ -116,11 +116,14 @@ require("mason-lspconfig").setup_handlers {
 		require("lspconfig")[server_name].setup {}
 	end,
 }
-
 require("mason-null-ls").setup({
     automatic_setup = true,
 })
 require('mason-null-ls').setup_handlers() 
+
+require("mason-nvim-dap").setup({
+    automatic_setup = true,
+})
 
 require("noice").setup()
 
