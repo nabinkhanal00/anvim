@@ -1,4 +1,4 @@
-require 'lua.lazy'
-require 'lua.options'
-require 'lua.mappings'
-require 'lua.plugins.init'
+require 'anvim.lazy'
+require 'anvim.options'
+require 'anvim.mappings'
+require 'anvim.plugins'
