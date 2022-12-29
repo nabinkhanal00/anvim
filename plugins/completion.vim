@@ -124,8 +124,38 @@ require('mason-null-ls').setup_handlers()
 require("mason-nvim-dap").setup({
     automatic_setup = true,
 })
+require("mason-nvim-dap").setup_handlers()
+
+require("nvim-dap-virtual-text").setup()
+require("dapui").setup()
+require('telescope').load_extension('dap')
 
 require("noice").setup()
+
+local dap_breakpoint = {
+  error = {
+    text = "🟥",
+    texthl = "LspDiagnosticsSignError",
+    linehl = "",
+    numhl = "",
+  },
+  rejected = {
+    text = "",
+    texthl = "LspDiagnosticsSignHint",
+    linehl = "",
+    numhl = "",
+  },
+  stopped = {
+    text = "⭐️",
+    texthl = "LspDiagnosticsSignInformation",
+    linehl = "DiagnosticUnderlineInfo",
+    numhl = "LspDiagnosticsSignInformation",
+  },
+}
+
+vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
+vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
+vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
 
 -- lvim.lsp.on_attach_callback = function
 EOF
