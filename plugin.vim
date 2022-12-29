@@ -1,6 +1,6 @@
 call plug#begin(JoinPath(g:data_path, 'site', 'plugged'))
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'kyazdani42/nvim-web-devicons' 
 Plug 'kdheepak/lazygit.nvim',
 Plug 'kyazdani42/nvim-tree.lua'
@@ -9,7 +9,17 @@ Plug 'numToStr/Comment.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'mg979/vim-visual-multi'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jayp0521/mason-null-ls.nvim'
+Plug 'mfussenegger/nvim-dap'
+Plug 'jayp0521/mason-nvim-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-telescope/telescope-dap.nvim'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -31,10 +41,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-surround'
 Plug 'ahmedkhalf/project.nvim'
-Plug 'kevinhwang91/rnvimr'
+Plug 'SmiteshP/nvim-gps'
 Plug 'simrat39/symbols-outline.nvim'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'stevearc/dressing.nvim'
 if filereadable(JoinPath(g:config_path, 'user', 'plugin.vim'))
 	exec "source " . JoinPath(g:config_path, 'user', 'plugin.vim')
 endif

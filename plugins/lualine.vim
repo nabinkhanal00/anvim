@@ -1,4 +1,6 @@
 lua <<EOF
+local gps = require("nvim-gps")
+gps.setup()
 require("lualine").setup{
 options = {
     icons_enabled = true,
@@ -10,7 +12,7 @@ options = {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff'},
-    lualine_c = {'filename'},
+	lualine_c = {{'filename'}, {gps.get_location, cond = gps.is_available}},
     lualine_x = {{'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
@@ -18,13 +20,12 @@ options = {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
+	lualine_c = {},
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
-  extensions = {},
+  extensions = {'nvim-tree'},
   theme='edge'
 }
 EOF
