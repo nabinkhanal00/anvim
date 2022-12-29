@@ -1,4 +1,4 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 local default_options = {
 	backup = false, -- creates a backup file
@@ -45,3 +45,9 @@ local default_options = {
 for k, v in pairs(default_options) do
 	vim.opt[k] = v
 end
+
+vim.cmd([[
+	sign define DiagnosticSignError text= texthl=DiagnosticSignError
+	sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn
+	sign define DiagnosticSignHint text= texthl=DiagnosticSignHint
+]])

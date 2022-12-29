@@ -1,6 +1,8 @@
 local cmp = require("cmp")
 
 cmp.setup({
+	enabled = true,
+	preselect = cmp.PreselectMode.None,
 	snippet = {
 		expand = function(args)
 			vim.fn["vsnip#anonymous"](args.body)
@@ -11,16 +13,29 @@ cmp.setup({
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
+		["<Tab>"] = function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+			else
+				fallback()
+			end
+		end,
+		["<S-Tab>"] = function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+			else
+				fallback()
+			end
+		end,
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.abort(),
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "vsnip" },
-	}, {
 		{ name = "buffer" },
 	}),
 })
@@ -99,3 +114,11 @@ require("mason-nvim-dap").setup({
 })
 
 require("mason-nvim-dap").setup_handlers()
+
+vim.cmd([[
+let g:vsnip_snippet_dir="/home/nabin/.config/nvim/snippets"
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+]])
