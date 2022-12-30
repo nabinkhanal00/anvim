@@ -121,8 +121,18 @@ require("lazy").setup({
 
 		"hrsh7th/cmp-vsnip",
 		"hrsh7th/vim-vsnip",
+		event = "InsertEnter",
 	},
 	{
 		"chaoren/vim-wordmotion",
 	},
+	-- {
+	-- 	"toppair/peek.nvim",
+	-- 	config = function()
+	-- 		require("peek").setup()
+	-- 		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+	-- 		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+	-- 	end,
+	-- 	run = "deno task --quiet build:fast",
+	-- },
 })
