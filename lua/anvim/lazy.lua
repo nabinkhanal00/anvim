@@ -38,7 +38,7 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme tokyonight]])
+			vim.cmd([[colorscheme tokyonight-storm]])
 		end,
 	},
 	{
@@ -126,13 +126,7 @@ require("lazy").setup({
 	{
 		"chaoren/vim-wordmotion",
 	},
-	-- {
-	-- 	"toppair/peek.nvim",
-	-- 	config = function()
-	-- 		require("peek").setup()
-	-- 		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-	-- 		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-	-- 	end,
-	-- 	run = "deno task --quiet build:fast",
-	-- },
+	{
+		"p00f/cphelper.nvim",
+	},
 })
