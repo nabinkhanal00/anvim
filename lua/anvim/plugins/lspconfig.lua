@@ -145,7 +145,7 @@ vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
 vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
 
 vim.cmd([[
-let g:vsnip_snippet_dir="/home/nabin/.config/nvim/snippets"
+let g:vsnip_snippet_dir="~/.config/nvim/snippets"
 imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
 smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
