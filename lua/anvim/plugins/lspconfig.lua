@@ -115,6 +115,35 @@ require("mason-nvim-dap").setup({
 
 require("mason-nvim-dap").setup_handlers()
 
+require("nvim-dap-virtual-text").setup()
+require("dapui").setup()
+require("telescope").load_extension("dap")
+
+local dap_breakpoint = {
+	error = {
+		text = "🟥",
+		texthl = "LspDiagnosticsSignError",
+		linehl = "",
+		numhl = "",
+	},
+	rejected = {
+		text = "",
+		texthl = "LspDiagnosticsSignHint",
+		linehl = "",
+		numhl = "",
+	},
+	stopped = {
+		text = "⭐️",
+		texthl = "LspDiagnosticsSignInformation",
+		linehl = "DiagnosticUnderlineInfo",
+		numhl = "LspDiagnosticsSignInformation",
+	},
+}
+
+vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
+vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
+vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
+
 vim.cmd([[
 let g:vsnip_snippet_dir="/home/nabin/.config/nvim/snippets"
 imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'

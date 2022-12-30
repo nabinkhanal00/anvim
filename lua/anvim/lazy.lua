@@ -88,6 +88,9 @@ require("lazy").setup({
 		"jayp0521/mason-null-ls.nvim",
 		"mfussenegger/nvim-dap",
 		"jayp0521/mason-nvim-dap.nvim",
+		"theHamsta/nvim-dap-virtual-text",
+		"rcarriga/nvim-dap-ui",
+		"nvim-telescope/telescope-dap.nvim",
 	},
 	{
 		"folke/noice.nvim",
