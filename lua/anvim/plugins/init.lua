@@ -1,4 +1,5 @@
 require("anvim.plugins.alpha")
+require("anvim.plugins.colorscheme")
 require("anvim.plugins.lspconfig")
 require("anvim.plugins.lualine")
 require("anvim.plugins.noice")
