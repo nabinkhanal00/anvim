@@ -27,8 +27,8 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
-nnoremap <silent> H  <cmd>bprevious<CR>
-nnoremap <silent> L <cmd>bnext<CR>
+nnoremap H ^
+nnoremap L $
 
 nnoremap gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -43,6 +43,9 @@ nnoremap <C-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
 
 imap <C-H> <C-w>
 imap <C-BS> <C-w>
+
+inoremap jk <ESC>
+inoremap kj <ESC>
 
 nnoremap <M-y> "+y
 vnoremap <M-y> "+y

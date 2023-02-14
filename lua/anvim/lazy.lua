@@ -37,6 +37,16 @@ require("lazy").setup({
 	},
 	{
 		"catppuccin/nvim",
+		config = function()
+			require('catppuccin').setup({
+				flavour = "mocha", -- Can be one of: latte, frappe, macchiato, mocha
+				background = { light = "latte", dark = "mocha" },
+				transparent_background = true,
+				term_colors = true,
+				compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
+			})
+			vim.cmd.colorscheme("catppuccin")
+		end
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -49,6 +59,7 @@ require("lazy").setup({
 
 		"nvim-telescope/telescope-ui-select.nvim",
 		"nvim-telescope/telescope-project.nvim",
+		"nvim-telescope/telescope-file-browser.nvim"
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -67,9 +78,6 @@ require("lazy").setup({
 	},
 	{
 		"ahmedkhalf/project.nvim",
-		config = function()
-			require("project_nvim").setup()
-		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
@@ -113,6 +121,7 @@ require("lazy").setup({
 
 		"hrsh7th/cmp-vsnip",
 		"hrsh7th/vim-vsnip",
+		"rafamadriz/friendly-snippets",
 		event = "InsertEnter",
 	},
 	{
@@ -120,5 +129,48 @@ require("lazy").setup({
 	},
 	{
 		"p00f/cphelper.nvim",
+		config = function()
+			vim.cmd [[
+			let g:cph#dir="/home/" .. $USER .. "/CP/Contests"
+			let g:cph#vsplit="true"
+			]]
+		end
 	},
+	{
+		"utilyre/barbecue.nvim",
+		name = "barbecue",
+		version = "*",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		opts = {
+			-- configurations go here
+		},
+	},
+	{
+		'toppair/peek.nvim',
+		build = 'deno task --quiet build:fast',
+		config = function() -- default config:
+			require('peek').setup({
+				auto_load = true, -- whether to automatically load preview when
+				-- entering another markdown buffer
+				close_on_bdelete = true, -- close preview window on buffer delete
+				syntax = true, -- enable syntax highlighting, affects performance
+				theme = 'dark', -- 'dark' or 'light'
+				update_on_change = true,
+				app = 'webview', -- 'webview', 'browser', string or a table of strings
+				-- explained below
+
+				-- relevant if update_on_change is true
+				throttle_at = 200000, -- start throttling when file exceeds this
+				-- amount of bytes in size
+				throttle_time = 'auto', -- minimum amount of time in milliseconds
+				-- that has to pass before starting new render
+			})
+			vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+			vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+		end
+	}
+
 })

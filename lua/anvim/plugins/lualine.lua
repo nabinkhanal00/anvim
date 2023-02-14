@@ -10,7 +10,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff" },
-		lualine_c = { { "filename" }, { navic.get_location, cond = navic.is_available } },
+		lualine_c = { "filename" },
 		lualine_x = { { "diagnostics", sources = { "nvim_diagnostic", "coc" } } },
 		lualine_y = { "filetype" },
 		lualine_z = { "location" },

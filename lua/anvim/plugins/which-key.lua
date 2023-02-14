@@ -134,11 +134,11 @@ local mappings = {
 		d = { "<cmd>BufferClose<cr>", "Delete" },
 		D = { "<cmd>BufferCloseAllButCurrentOrPinned<cr>", "Delete Other" },
 		p = { "<cmd>BufferPin<cr>", "Pin" },
-		l = { "<cmd>BufferNext<cr>", "Right" },
+		n = { "<cmd>BufferNext<cr>", "Right" },
 		L = { "<cmd>BufferCloseBuffersRight<cr>", "Delete Right" },
 		H = { "<cmd>BufferCloseBuffersLeft<cr>", "Delete Left" },
-		h = { "<cmd>BufferPrevious<cr>", "Left" },
-		b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List" },
+		b = { "<cmd>BufferPrevious<cr>", "Left" },
+		t = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List" },
 	},
 
 	w = {

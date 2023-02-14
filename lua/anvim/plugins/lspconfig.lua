@@ -29,6 +29,9 @@ local cmp = require("cmp")
 
 cmp.setup({
 	enabled = true,
+	completion = {
+		autocomplete = false,
+	},
 	preselect = cmp.PreselectMode.None,
 	snippet = {
 		expand = function(args)
@@ -40,21 +43,7 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<Tab>"] = function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-			else
-				fallback()
-			end
-		end,
-		["<S-Tab>"] = function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
-			else
-				fallback()
-			end
-		end,
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
+		["<C-b>"] = cmp.mapping.scroll_docs( -4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.abort(),
@@ -64,6 +53,7 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "vsnip" },
 		{ name = "buffer" },
+		{ name = "orgmode" },
 	}),
 	formatting = {
 
@@ -73,11 +63,11 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				vsnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
-			})[entry.source.name]
+					nvim_lsp = "[LSP]",
+					vsnip = "[Snippet]",
+					buffer = "[Buffer]",
+					path = "[Path]",
+				})[entry.source.name]
 			return vim_item
 		end,
 	},

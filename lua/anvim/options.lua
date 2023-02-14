@@ -4,7 +4,7 @@ local default_options = {
 	backup = false, -- creates a backup file
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
 	cmdheight = 1, -- more space in the neovim command line for displaying messages
-	completeopt = { "menuone", "noselect" },
+	completeopt = { "menuone", "noselect", },
 	conceallevel = 0, -- so that `` is visible in markdown files
 	fileencoding = "utf-8", -- the encoding written to a file
 	foldmethod = "manual", -- folding, set to "expr" for treesitter based folding
@@ -45,7 +45,12 @@ local default_options = {
 for k, v in pairs(default_options) do
 	vim.opt[k] = v
 end
-
+vim.api.nvim_create_autocmd("BufEnter", {
+	command = "silent! loadview",
+})
+vim.api.nvim_create_autocmd("BufWinLeave", {
+	command = "silent! mkview",
+})
 vim.cmd([[
 	sign define DiagnosticSignError text= texthl=DiagnosticSignError
 	sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn
